@@ -16,9 +16,14 @@
     font-size: 62.5%;
   }
   body {
-    background-image: linear-gradient(45deg, #0a0f28, #0c0f28);
-    background-color: #0a0f28;
-    color: #93a8b3;
+    /* background-image: linear-gradient(45deg, #223281, #3b4172); */
+    /* background-image: linear-gradient(to right, #4568dc, #b06ab3); */
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-color: #eee7ff;
+    color:#eee7ff;
     scrollbar-width: none;
   }
   a {
@@ -215,9 +220,9 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #0a0f28;
+    background-color:#8f69c0;;
     padding: 5px 0;
-    box-shadow: 0px 10px 20px 0px #0a0f28;
+    box-shadow: 0px 10px 20px 0px #8f69c0;;
     z-index: 200;
   }
   .navbar {
@@ -575,13 +580,14 @@
   
   /*Bottom Music Player*/
   
+  
   #player {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 20;
-    background-color: #232b2b;
+    background-color: #6045dc;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -654,11 +660,11 @@
   .top-controls {
     margin-bottom: 0.5rem;
   }
-  .top-controls span:nth-child(3) {
+  /* .top-controls span:nth-child(3) {
     border: 2px solid white;
     padding: 0.5rem;
     border-radius: 50%;
-  }
+  } */
   .bottom-controls {
     justify-content: space-between;
     min-width: 23rem;
@@ -675,7 +681,7 @@
   }
   .queue {
     height: 75vh;
-    background-color: #232b2b;
+    background-color: #5638388c;
     overflow-y: auto;
     position: relative;
   }
@@ -684,7 +690,7 @@
     position: sticky;
     justify-content: space-between;
     background-color: inherit;
-    box-shadow: 0px 10px 20px 0px #232b2b;
+    box-shadow: 0px 10px 20px 0px #d069d485;
   }
   .queue .navbar-fixed .left {
     color: white;
@@ -757,6 +763,20 @@
     color: #1fb7d8;
     margin-right: -5px;
   }
+
+.play-button{
+  position: relative;
+}
+.play-button .pause-button::after{
+  content: "play_circle";
+  font-family: "Material Icons Round";
+  font-size: 2rem;
+}
+
+.play-button .toggle-button:checked + .pause-button::after{
+  content: "pause_circle";
+  color:lightblue;
+}
   
   /*----------  Audio and Volume seek bar  ----------*/
   
@@ -859,8 +879,8 @@
   /*Hero section*/
   
   .hero {
-    background-color: #121a3f;
-    box-shadow: #090e27 0px 4px 12px;
+    background-color: #9e05fc;
+    box-shadow: #9d00ffde 0px 4px 12px;
     justify-content: space-between;
     height: 30rem;
     border-radius: 2px;
@@ -961,7 +981,7 @@
     margin-top: 1rem;
   }
   .all-songs .song {
-    background-color: #222434;
+    background-color: #c100ff;
     width: 100%;
     padding: 1rem;
     padding-right: 4rem;
@@ -969,8 +989,8 @@
   }
   .all-songs .song:hover,
   .all-songs .song:focus {
-    background-color: #27293a;
-    box-shadow: #090e27 0px 4px 12px;
+    background-color: #8300ff;
+    box-shadow: #8300ff 0px 4px 12px;
   }
   .all-songs .favourite::after {
     margin-right: 2rem;
